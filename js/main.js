@@ -1,6 +1,7 @@
 const moviesContainer = document.querySelector(".movies");
 const selector = document.querySelector(".selector");
 const search = document.getElementById('searchBox');
+const searchBtn = document.getElementById('searchBtn');
 const movieDate = document.getElementById('date');
 const img = "https://image.tmdb.org/t/p/original";
 const api = {
@@ -75,9 +76,9 @@ selector.addEventListener('click',(selected)=>{
 })
 
 
-search.addEventListener('keyup',(event)=>{
+searchBtn.addEventListener('click',()=>{
 
- let value = event.target.value; 
+ let value = search.value; 
   moviesContainer.innerHTML = "";
 
       if(search.value.length != 0){
